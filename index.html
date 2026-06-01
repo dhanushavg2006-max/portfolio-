@@ -1,317 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhanusha Portfolio</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
 
-    <title>Dhanusha Portfolio</title>
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <style>
+html{
+    scroll-behavior:smooth;
+}
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-        html
-        {
-            scroll-behaviour:smooth;
-        }
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+}
 
-        body{
-            font-family:Arial, sans-serif;
-            background:#f5f7fa;
-            color:#333;
-        }
-        .logo{
-            color:white;
-            margin-bottom:10px;
-            font-size:30px;
-        }
+/* NAVBAR */
 
-        /* Navbar */
+nav{
+    background:#0f172a;
+    color:white;
+    padding:25px 10px;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    text-align:center;
+}
 
-        nav{
-            background:#0f172a;
-            padding:15px;
-            text-align:center;
-            position:sticky;
-            top:0;
-        }
+/* Name Center */
+.logo{
+    font-size:34px;
+    font-weight:bold;
+    color:#38bdf8;
+    margin-bottom:8px;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:18px;
-            font-size:17px;
-            transition:0.3s;
-        }
+/* Subtitle */
+.subtitle{
+    font-size:16px;
+    color:#cbd5e1;
+    margin-bottom:12px;
+}
 
-        nav a:hover{
-            color:#38bdf8;
-        }
+/* Menu */
+.nav-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
 
-        /* Home */
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+}
 
-        .home{
-            height:100vh;
-            background:linear-gradient(to right,#0f172a,#1e293b);
-            color:white;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            flex-direction:column;
-            padding:20px;
-        }
+.nav-links a:hover{
+    color:#38bdf8;
+}
 
-        .home h1{
-            font-size:60px;
-            margin-bottom:15px;
-        }
+/* HOME */
 
-        .home p{
-            font-size:24px;
-            margin-bottom:25px;
-        }
+.home{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    padding:20px;
+}
 
-        .btn{
-            background:#38bdf8;
-            color:white;
-            padding:12px 25px;
-            text-decoration:none;
-            border-radius:8px;
-            font-size:18px;
-        }
+.home h1{
+    font-size:55px;
+}
 
-        .btn:hover{
-            background:#0ea5e9;
-        }
+.home p{
+    font-size:22px;
+    margin-top:10px;
+}
 
-        /* Sections */
+.btn{
+    margin-top:25px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
 
-        section{
-            padding:70px 10%;
-            scroll-margin-top:80px;
-        }
+/* SECTIONS */
 
-        .title{
-            text-align:center;
-            margin-bottom:40px;
-            font-size:35px;
-            color:#0f172a;
-        }
+section{
+    padding:90px 10%;
+    scroll-margin-top:120px;
+}
 
-        /* About */
+.title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:30px;
+    color:#0f172a;
+}
 
-        .about-box{
-            background:white;
-            padding:30px;
-            border-radius:15px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-            line-height:30px;
-        }
+/* CARDS */
 
-        /* Skills */
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    max-width:900px;
+    margin:auto;
+}
 
-        .skills{
-            display:flex;
-            flex-wrap:wrap;
-            gap:15px;
-            justify-content:center;
-        }
+/* SKILLS */
 
-        .skills div{
-            background:#0f172a;
-            color:white;
-            padding:15px 25px;
-            border-radius:10px;
-            font-size:18px;
-        }
+.skills{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-        /* Cards */
+.skills div{
+    background:#0f172a;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+}
 
-        .card{
-            background:white;
-            padding:25px;
-            border-radius:15px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-            margin-bottom:20px;
-        }
+/* FOOTER */
 
-        .card h3{
-            margin-bottom:15px;
-            color:#0f172a;
-        }
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
 
-        .card p{
-            line-height:28px;
-        }
+/* RESPONSIVE */
 
-        /* Contact */
+@media(max-width:768px){
 
-        .contact p{
-            font-size:18px;
-            margin:15px 0;
-        }
+    .logo{
+        font-size:26px;
+    }
 
-        /* Footer */
+    .home h1{
+        font-size:35px;
+    }
 
-        footer{
-            background:#0f172a;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+    .nav-links{
+        gap:15px;
+    }
+}
 
-    </style>
-
+</style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">DHANUSHA V</div>
+    <div class="subtitle">Web Developer | CS Student</div>
 
-    <nav>
-        <h2>class="logo">My Portfolio</h2>
-
+    <div class="nav-links">
         <a href="#home">Home</a>
-
         <a href="#about">About</a>
-
         <a href="#skills">Skills</a>
-
         <a href="#internship">Internship</a>
-
         <a href="#projects">Projects</a>
-
         <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    </nav>
+<!-- HOME -->
+<section class="home" id="home">
 
-    <!-- Home -->
+    <h1>Hi, I'm Dhanusha</h1>
+    <p>Aspiring Web Developer </p>
 
-    <section class="home" id="home">
+    <a href="#about" class="btn">Explore More</a>
 
-        <h1>DHANUSHA V</h1>
+</section>
 
-        <p>Web Developer & Computer Science Student</p>
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="title">About Me</h2>
+    <div class="card">
+        I am a passionate Computer Science student interested in Web Development and UI Design.
+        I love creating clean, user-friendly websites and learning new technologies.
+    </div>
+</section>
 
-        <a href="#about" class="btn">Explore More</a>
+<!-- SKILLS -->
+<section id="skills">
+    <h2 class="title">Skills</h2>
 
-    </section>
+    <div class="skills">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>Python</div>
+    </div>
+</section>
 
-    <!-- About -->
+<!-- INTERNSHIP -->
+<section id="internship">
+    <h2 class="title">Internship</h2>
 
-    <section id="about">
+    <div class="card">
+        Web Development Intern - Working on Employee Management System and learning real-time web development.
+    </div>
+</section>
 
-        <h2 class="title">About Me</h2>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="title">Projects</h2>
 
-        <div class="about-box">
+    <div class="card">
+        Employee Management System - A web-based project to manage employee details and operations.
+    </div>
+</section>
 
-            <p>
-                I am a passionate Computer Science student interested in Web Development
-                and UI Design. I enjoy creating clean and user-friendly websites
-                while continuously learning new technologies.
-            </p>
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="title">Contact</h2>
 
-        </div>
+    <div class="card">
+        Email: dhanushavg2006@gmail.com <br><br>
+        Phone: 7395834451 <br><br>
+        LinkedIn: linkedin.com/in/dhanusha-v <br><br>
+        GitHub: github.com/dhanushavg2006-max
+    </div>
+</section>
 
-    </section>
-
-    <!-- Skills -->
-
-    <section id="skills">
-
-        <h2 class="title">Skills</h2>
-
-        <div class="skills">
-
-            <div>HTML</div>
-
-            <div>CSS</div>
-
-            <div>JavaScript</div>
-
-            <div>Python</div>
-
-            <div>GitHub</div>
-
-            <div>UI/UX Design</div>
-
-        </div>
-
-    </section>
-
-    <!-- Internship -->
-
-    <section id="internship">
-
-        <h2 class="title">Internship</h2>
-
-        <div class="card">
-
-            <h3>Web Development Intern</h3>
-
-            <p>
-                Working on Employee Management System project and learning
-                real-time web development concepts, CRUD operations,
-                and frontend designing.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- Projects -->
-
-    <section id="projects">
-
-        <h2 class="title">Projects</h2>
-
-        <div class="card">
-
-            <h3>Employee Management System</h3>
-
-            <p>
-                A simple web-based project developed to manage employee details,
-                records, and operations efficiently.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-
-    <section id="contact">
-
-        <h2 class="title">Contact</h2>
-
-        <div class="card contact">
-
-            <p><b>Email :</b> dhanushavg2006@gmail.com</p>
-
-            <p><b>Phone :</b> 7395834451</p>
-
-            <p><b>LinkedIn :</b> linkedin.com/in/dhanusha-v</p>
-
-            <p><b>GitHub :</b> github.com/dhanushavg2006-max</p>
-
-        </div>
-
-    </section>
-
-    <!-- Footer -->
-
-    <footer>
-
-        <p>© 2026 Dhanusha Portfolio | All Rights Reserved</p>
-
-    </footer>
+<!-- FOOTER -->
+<footer>
+    © 2026 Dhanusha Portfolio | All Rights Reserved
+</footer>
 
 </body>
-
 </html>
